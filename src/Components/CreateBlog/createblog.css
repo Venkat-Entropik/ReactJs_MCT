@@ -1,0 +1,58 @@
+.createBlog{
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: lightgray
+}
+.createBlogConainer{
+    width: 70%;
+    height: 60%;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 20px;
+    margin:30px auto;
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.createtitle{
+    text-align: center;
+    text-transform: capitalize;
+    color: darkgreen;
+}
+.createCompTitle{
+    width: 50%;
+    height: 2rem;
+    margin: 25px;
+    font-size: 1.2rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    outline: none;
+    color: blueviolet;
+    padding: 1px;
+}
+.textArea{
+    width: 50%;
+    height: 30%;
+    margin: 20px;
+    font-size: 1rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    outline: none;
+    color: blueviolet;
+    padding: 1px;
+}
+.createBlogbut{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -11,3 +11,20 @@ export const userDataReducer=(state=userData,{type,data})=>{
             return state;
     }
 }
+
+const allBlogData=[
+
+]
+   
+
+
+export const blogDataReducer=(state=allBlogData,{type,data})=>{
+    switch (type) {
+        case "BLOGDATA":
+            
+            return[...state,data]
+    
+        default:
+            return state;
+    }
+}

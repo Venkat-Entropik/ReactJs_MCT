@@ -1,5 +1,7 @@
 import {combineReducers} from 'redux'
 import { userDataReducer } from './reducer'
+import { blogDataReducer } from './reducer'
 export const rootReducer =combineReducers({
-userDataReducer:userDataReducer
+userDataReducer:userDataReducer,
+blogDataReducer:blogDataReducer
 })

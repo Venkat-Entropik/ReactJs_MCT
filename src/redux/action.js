@@ -4,3 +4,10 @@ export const userDetails=(userData)=>{
         data:userData
     }
 }
+
+export const BloData=(data)=>{
+    return{
+        type:"BLOGDATA",
+        data:data
+    }
+}
