@@ -10,8 +10,7 @@ const HomeComp = () => {
   const gitHubdata=useSelector((state)=>{
     return state.userDataReducer.userDetails
 })
-console.log("git",gitHubdata)
- console.log("test",selector)
+
   return (
     <div className='homeComp'>
 
@@ -48,7 +47,7 @@ console.log("git",gitHubdata)
                 </div>
                 <div className="bottomContainer">
                 <h3 className='titleofBlog'>{ele.title}</h3>
-                <p className='blogDescription'>{ele.description}</p>
+                <p className='blogDescription'>{ele.description.substring(0,100)}</p>
                 <div className="userNameXXX gap">
                 <i class="fa-solid fa-user"></i>
                   <p>{gitHubdata.login}</p>
