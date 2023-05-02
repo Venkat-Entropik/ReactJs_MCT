@@ -13,11 +13,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+   
     /* border: 2px solid black; */
     margin: auto;
     background-color: white;
     box-shadow: 0px 0px 3px black;
     border-radius: 20px;
+   
 }
 .leftContainer{
     width: 50%;
@@ -26,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
     background-color: lightpink;
     border-radius: 20px 0px 0px 20px ;
 }
@@ -115,3 +118,11 @@ i{
     padding: 0;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+    .loginContainer{
+        width: 90%;
+        height: 80%;
+      
+    }
+  }

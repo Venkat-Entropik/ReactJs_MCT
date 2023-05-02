@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+
 import './blogDesc.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { useState } from 'react'
+
 const BlogDescription = () => {
- const[title,setTitle]=useState("")
+
     const navigate=useNavigate()
     const{id}=useParams()
     const selector=useSelector((state)=>{
@@ -16,7 +16,13 @@ const BlogDescription = () => {
         return element.id === id ? (val.push(element)) : null
     })
     console.log("val",val)
-      
+    const galleryData1=useSelector((state)=>{
+      return state.galleryReducer.data
+    })
+    const images1=[]
+    galleryData1.forEach((ele)=>{
+      images1.push(ele.urls.regular)
+    })
     
  
   return (
@@ -30,7 +36,7 @@ const BlogDescription = () => {
     
                 </div>
                 <div className="blogImageConainer">
-                    <img src='https://www.skuvault.com/wp-content/uploads/2022/07/iStock-1355902675.jpg' className='blogImageX' alt='blog'/>
+                    <img src={images1[Math.floor(Math.random()*images1.length)]} className='blogImageX' alt='blog'/>
                 </div>
                 <div className="blogDescriptionContainer">
                         <div className="textContainer">

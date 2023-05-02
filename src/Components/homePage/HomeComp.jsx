@@ -18,7 +18,7 @@ const images=[]
 galleryData.forEach((ele)=>{
   images.push(ele.urls.regular)
 })
-console.log("images",images)
+// console.log("images",images)
 
   return (
     <div className='homeComp'>
@@ -49,7 +49,7 @@ console.log("images",images)
               <Link to={`/${ele.id}`}>
                  <div className="homeCard">
                 <div className="blogImageContainer">
-                  <img src='https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg' alt='blogImage' className='blogImage'/>
+                  <img src={images[Math.floor(Math.random()*images.length)]} alt='blogImage' className='blogImage'/>
                   <div className="userLogoContainer">
                   <img src={gitHubdata.avatar_url} alt='userLogo' className='userLogo'/>
                   </div>
