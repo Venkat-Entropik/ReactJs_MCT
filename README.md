@@ -30,6 +30,8 @@
 ![blogs](https://user-images.githubusercontent.com/114353712/235679572-3c78ce53-6738-4e49-a956-b86baf128172.PNG)
       
       If you click on that card it will redirect to read blog page in that you can read the blog details
+![readBlog](https://user-images.githubusercontent.com/114353712/235681167-28ff51d6-301a-4a6f-8cf2-3f0c30e29cfd.PNG)
+
       
                                                                           --- Thank You ----
 
