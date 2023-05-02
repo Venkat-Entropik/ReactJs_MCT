@@ -7,7 +7,7 @@ const NavComp = () => {
     const selector=useSelector((state)=>{
         return state.userDataReducer.userDetails
     })
-    console.log("selector",selector)
+    // console.log("selector",selector)
   return (
     <div className='navComp'>
         <div className="navContainer">

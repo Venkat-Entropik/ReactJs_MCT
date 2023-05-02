@@ -6,13 +6,21 @@ import { useState } from 'react'
 import { userDetails } from '../../redux/action'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
+import { useSelector } from 'react-redux'
 
 const LoginPage = () => {
 const[userName,getUserName]=useState("")
-const[share,ShareUserName]=useState(null);
+const[share,ShareUserName]=useState("");
 const[inpuser,setInpuser]=useState("")
 const[pass,setPass]=useState("")
+
+
+const selector=useSelector((state)=>{
+    return state.userDataReducer.userDetails
+})
+console.log("userData",selector)
+
+
 
 const dispatch=useDispatch()
 async function fetchUserDetails(){
@@ -27,6 +35,27 @@ useEffect(() => {
 }, [share])
 
 
+
+
+const dataValidation=()=>{
+    
+
+         ShareUserName(userName)
+        if(inpuser==='admin@gmail.com' && pass==='admin@123'){
+            localStorage.setItem("loginsuccess",true)
+            // navigate("/")
+            setTimeout(()=>{
+                navigate("/")
+            },1000)
+           
+        }
+        else{
+            alert("Wrong Credintials")
+        }
+    
+}
+
+
   return (
     <div className='loginPage'>
         <div className="loginContainer">
@@ -39,6 +68,7 @@ useEffect(() => {
                 <div className="user">
                 <input type='text' placeholder='Username' className='userName' onChange={(e)=>{
                     getUserName(e.target.value)
+                    
                 }}/>
                 <i class="fa-solid fa-user"></i>
                 </div>
@@ -51,23 +81,13 @@ useEffect(() => {
                 <div className="user">
                 <input type='password' placeholder='Your Password' className='Password' onChange={(e)=>{
                     setPass(e.target.value)
-                }}/>
+                }}  />
                 <i class="fa-solid fa-key"></i>
                 </div>
                 
                
                 <button className='but' onClick={()=>{
-                    ShareUserName(userName)
-                    setTimeout(()=>{
-                        if(inpuser==='admin@gmail.com' && pass==='admin@123'){
-                            localStorage.setItem("loginsuccess",true)
-                            navigate("/")
-                           
-                        }
-                        else{
-                            alert("Wrong Credintials")
-                        }
-                    },500)
+                    dataValidation()
                 }}>Login</button>
                  <p className='note'>Note:Enter your Github user Name</p>
                  <p className='note1'>Email:admin@gmail.com</p>
