@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { userDetails } from '../../redux/action'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+
 
 const LoginPage = () => {
 const[userName,getUserName]=useState("")
@@ -15,10 +15,8 @@ const[inpuser,setInpuser]=useState("")
 const[pass,setPass]=useState("")
 
 
-const selector=useSelector((state)=>{
-    return state.userDataReducer.userDetails
-})
-console.log("userData",selector)
+
+
 
 
 
