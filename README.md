@@ -6,9 +6,10 @@
                   Password:-admin@123
                   Note:- You must enter your Github user name to get your profile pic and name
        
-      When ever you open the above link it will open a login page
+              When ever you open the above link it will open a login page
       
-      ![login](https://user-images.githubusercontent.com/114353712/235677738-65a8dc02-fcfa-4437-bdbc-19092ef45222.PNG)
+![login](https://user-images.githubusercontent.com/114353712/235680382-11cc25eb-cfb9-42e8-a5c0-be8876f229d7.PNG)
+
 
       
       It will ask you to Enter UserName , Email and Password after enter these details it will automatically redirect to home page
