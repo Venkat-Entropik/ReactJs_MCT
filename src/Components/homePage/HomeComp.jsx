@@ -11,6 +11,15 @@ const HomeComp = () => {
     return state.userDataReducer.userDetails
 })
 
+const galleryData=useSelector((state)=>{
+  return state.galleryReducer.data
+})
+const images=[]
+galleryData.forEach((ele)=>{
+  images.push(ele.urls.regular)
+})
+console.log("images",images)
+
   return (
     <div className='homeComp'>
 

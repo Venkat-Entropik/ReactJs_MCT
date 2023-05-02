@@ -9,6 +9,7 @@ const CreateBlogComp = () => {
     const dispatch=useDispatch()
     const[titleData,setTitle]=useState("")
     const[desc,setDisc]=useState("")
+    const[validate,setValidate]=useState(true)
     const[time,setTime]=useState(new Date())
     const newBlog={
         id: new Date().getTime().toString(),
@@ -16,7 +17,17 @@ const CreateBlogComp = () => {
         description:desc,
         month:time.toString()
     }
-    
+   const validation=()=>{
+    if(titleData !== '' && desc !==''){
+         
+        dispatch(BloData(newBlog))
+        naigate('/')
+    }
+    else{
+        alert("All fields are required")
+        return
+    }
+   }
   return (
     <div className='createBlog'>
         <div className="createBlogConainer">
@@ -28,8 +39,8 @@ const CreateBlogComp = () => {
                 setDisc(e.target.value)
             }}></textarea>
             <button className='createBlogbut' onClick={()=>{
-                dispatch(BloData(newBlog))
-                naigate('/')
+               validation()
+                
             }}>Add Post</button>
         </div>
     </div>

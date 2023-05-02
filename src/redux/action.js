@@ -11,3 +11,10 @@ export const BloData=(data)=>{
         data:data
     }
 }
+
+export const Gallary=(data)=>{
+    return{
+        type:"GALLARY",
+        data:data
+    }
+}

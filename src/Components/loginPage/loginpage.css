@@ -105,3 +105,13 @@ i{
     font-family: cursive;
     font-weight: 900;
 }
+.note{
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.note1{
+    color: red;
+    padding: 0;
+    font-weight: bold;
+}

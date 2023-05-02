@@ -28,3 +28,16 @@ export const blogDataReducer=(state=allBlogData,{type,data})=>{
             return state;
     }
 }
+const galleryData={
+    data:[]
+}
+export const galleryReducer=(state=galleryData,{type,data})=>{
+    switch (type) {
+        case "GALLARY":
+            
+        return{...state,data:data}
+    
+        default:
+           return state
+    }
+}
