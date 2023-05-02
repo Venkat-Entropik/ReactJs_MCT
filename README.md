@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+                                                                     -- Blog Application --
+                                                                     
+                  Overview:-  This is a Blog application which we can create a blog and reac that blogs
+                  Project Url:- https://react-js-mct.vercel.app/
+                  Email:- admin@gmail.com
+                  Password:-admin@123
+                  Note:- You must enter your Github user name to get your profile pic and name
+       
+      When ever you open the above link it will open a login page
+      
+      ![login](https://user-images.githubusercontent.com/114353712/235677738-65a8dc02-fcfa-4437-bdbc-19092ef45222.PNG)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+      
+      It will ask you to Enter UserName , Email and Password after enter these details it will automatically redirect to home page
+      
+      ![home](https://user-images.githubusercontent.com/114353712/235677803-6588b2d7-c193-42f4-aa43-35582d3e0407.PNG)
+      
+      In home page one card will be available to create a blog after clicking of that blog it will redirect to create blog page
+      
+      ![create](https://user-images.githubusercontent.com/114353712/235678230-ffc7556d-87df-4c01-b1e6-58cde7ce1504.PNG)
+      
+      In this create blog page it show two fields like title and description. If any of these fields are not enter means it will show you alert message like all fields         are required
+      
+      
+      ![createblog](https://user-images.githubusercontent.com/114353712/235678835-d5b73be3-caf5-43f0-9174-f618f05bebba.PNG) 
+      
+      After Entering the data click on Add Post then it will redirect to home page In home page it will show blog component contains image and title of blog and short        description of that blog and your Github profile, name and date when the component created
+      
+      ![blogs](https://user-images.githubusercontent.com/114353712/235679572-3c78ce53-6738-4e49-a956-b86baf128172.PNG)
+      
+      If you click on that card it will redirect to read blog page in that you can read the blog details
+      
+                                                                          --- Thank You ----
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+      
+      
+                                                
