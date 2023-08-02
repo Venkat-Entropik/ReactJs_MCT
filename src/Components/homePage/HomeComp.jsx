@@ -58,14 +58,14 @@ galleryData.forEach((ele)=>{
                 </div>
                 <div className="bottomContainer">
                 <h3 className='titleofBlog'>{ele.title}</h3>
-                <p className='blogDescription'>{ele.description?.substring(0,100)}</p>
+                <p className='blogDescription'>{ele.description.substring(0,100)}</p>
                 <div className="userNameXXX gap">
                 <i class="fa-solid fa-user"></i>
                   <p>{gitHubdata.login ? gitHubdata.login : "User"}</p>
                 </div>
                 <div className="userNameXXX">
                 <i class="fa-solid fa-calendar-days"></i>
-                  <p>{ele.month?.substring(0,15)}</p>
+                  <p>{ele.month.substring(0,15)}</p>
                 </div>
                 </div>
             </div>

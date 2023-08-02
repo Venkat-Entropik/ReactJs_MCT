@@ -67,6 +67,7 @@
 .blogdescx{
     color: blueviolet;
     font-size: 1rem;
+    overflow-y: scroll;
 } 
 .loader{
     width: 100%;
