@@ -1,4 +1,5 @@
-.loginPage{
+
+  .loginPage{
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
@@ -97,7 +98,7 @@ i{
     outline: none;
 }
 .but{
-    width: 50%;
+    width: 40%;
     height: 2.1rem;
     border-radius: 15px;
     border: none;
@@ -107,22 +108,51 @@ i{
     color: white;
     font-family: cursive;
     font-weight: 900;
-}
-.note{
-    color: red;
-    margin-top: 20px;
-    font-weight: bold;
-}
-.note1{
-    color: red;
-    padding: 0;
-    font-weight: bold;
+    margin-right: 10px;
 }
 
+
 @media only screen and (max-width: 600px) {
-    .loginContainer{
-        width: 90%;
-        height: 80%;
-      
+    .loginContainer {
+      width: 90%;
+      height: 90%;
+    }
+  
+    .leftContainer {
+      width: 100%;
+      height: 40%;
+      border-radius: 20px 20px 0 0;
+    }
+  
+    .rightContainer {
+      width: 100%;
+      height: 70%;
+      padding: 10px;
+    text-align: center;
+    }
+  
+    .loginImage {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .inputContainer {
+      width: 100%;
+    }
+  
+    .but {
+      width: 40%;
+    }
+    .userName{
+        width: 100%;
+    }
+    .Email{
+        width: 100%;
+    }
+    .Password{
+        width: 100%;
+    }
+    .logintitle{
+        font-size: 1.7rem;
     }
   }
