@@ -3,6 +3,7 @@ import './navComp.css'
 import navLogo from '../ImagesContainer/logo.png'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import avathar from '../ImagesContainer/pngwing.com.png'
 const NavComp = () => {
     const selector=useSelector((state)=>{
         return state.userDataReducer.userDetails
@@ -22,8 +23,8 @@ const NavComp = () => {
                 
             </ul>
             <div className="userOut">
-            <img src={selector.avatar_url} alt='NavUser' className='navUser'/>
-            <h3 style={{color:"darkred"}}>{selector.login}</h3>
+            <img src={selector.avatar_url ? selector.avatar_url : avathar} alt='NavUser' className='navUser'/>
+            <h3 style={{color:"darkred"}}>{selector.login?.slice(0,10)}</h3>
             </div>
         </div>
     </div>

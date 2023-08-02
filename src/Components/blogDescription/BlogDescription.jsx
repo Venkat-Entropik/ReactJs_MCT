@@ -1,10 +1,13 @@
 
 import './blogDesc.css'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
+import { useCon } from '../context/CreateContext'
 
 const BlogDescription = () => {
-
+  
+  const dispatch=useDispatch()
+    const{setEdit,titleData,setTitle,desc,setDisc,editId,setEditId,time,setTime}=useCon()
     const navigate=useNavigate()
     const{id}=useParams()
     const selector=useSelector((state)=>{
@@ -42,14 +45,28 @@ const BlogDescription = () => {
                         <div className="textContainer">
                             <h2 className='blogtitlex'>{ele.title}</h2>
                             <p className='blogdescx'>{ele.description}</p>
+                            <div>
+
                             <button className='homebut' onClick={()=>{
                                 navigate("/")
                             }}>Go to Home</button>
+                            <button className='homebut' style={{margin:'5px'}} onClick={()=>{
+                              setEdit(true)
+                           
+
+                              setTitle(ele.title)
+                              setDisc(ele.description)
+                              setEditId(ele.id)
+                              setTime(ele.month)
+                              navigate('/createcomp')
+                              
+                            }}>Edit</button>
+                            </div>
                         </div>
                 </div>
             </div>
             )
-        })) : (<h1>...Loading !</h1>)
+        })) : (<h1 className='loader'>...Loading !</h1>)
       }
 
     </div>

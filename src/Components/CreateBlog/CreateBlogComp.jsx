@@ -2,15 +2,19 @@ import React from 'react'
 import './createblog.css'
 import { useState } from 'react'
 import {useDispatch} from 'react-redux'
-import { BloData } from '../../redux/action'
+import { BloData, EditBlog, } from '../../redux/action'
 import { useNavigate } from 'react-router-dom'
+import { useCon } from '../context/CreateContext'
+
+
 const CreateBlogComp = () => {
+    const{edit,titleData,setTitle,desc,setDisc,editId,setEditId,time,setEdit}=useCon()
     const naigate=useNavigate()
     const dispatch=useDispatch()
-    const[titleData,setTitle]=useState("")
-    const[desc,setDisc]=useState("")
+    
     const[validate,setValidate]=useState(true)
-    const[time,setTime]=useState(new Date())
+    
+    
     const newBlog={
         id: new Date().getTime().toString(),
         title:titleData,
@@ -32,16 +36,33 @@ const CreateBlogComp = () => {
     <div className='createBlog'>
         <div className="createBlogConainer">
             <h1 className='createtitle'>Create a new Blog</h1>
-            <input type='text' placeholder='Title' className='createCompTitle' onChange={(e)=>{
+            <input type='text' placeholder='Title' value={titleData} className='createCompTitle' onChange={(e)=>{
                 setTitle(e.target.value)
             }}/>
-            <textarea className='textArea' placeholder='Enter Subject' rows="4" cols="50" onChange={(e)=>{
+            <textarea className='textArea' value={desc} placeholder='Enter Subject' rows="4" cols="50" onChange={(e)=>{
                 setDisc(e.target.value)
             }}></textarea>
-            <button className='createBlogbut' onClick={()=>{
-               validation()
-                
-            }}>Add Post</button>
+            {
+                edit ? (<button className='createBlogbut' onClick={()=>{
+                   
+                      dispatch(EditBlog({
+                                id:editId,
+                                title:titleData,
+                                description:desc,
+                                time:time
+                            }))
+                    setDisc('')
+                    setTitle('')
+                    setEditId('')
+                    naigate('/')
+                    setEdit(false)
+                    
+                 }}>Edit Post</button>) : (<button className='createBlogbut' onClick={()=>{
+                    
+                    validation()
+                     
+                 }}>Add Post</button>)
+            }
         </div>
     </div>
   )

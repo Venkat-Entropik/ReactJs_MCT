@@ -18,12 +18,18 @@ const allBlogData=[
    
 
 
-export const blogDataReducer=(state=allBlogData,{type,data})=>{
-    switch (type) {
+export const blogDataReducer=(state=allBlogData,action)=>{
+    switch (action.type) {
         case "BLOGDATA":
             
-            return[...state,data]
-    
+            return[...state,action.data]
+        case "EDIT":
+            return [...state.map((item)=>{
+                // console.log("item",item);
+                // console.log('id',item.id);
+                // console.log('newId',item.id);
+                return item.id === action.data.id ? {...item,title:action.data.title,description:action.data.description} : item
+            })]
         default:
             return state;
     }

@@ -14,12 +14,6 @@ const[share,ShareUserName]=useState("");
 const[inpuser,setInpuser]=useState("")
 const[pass,setPass]=useState("")
 
-
-
-
-
-
-
 const dispatch=useDispatch()
 async function fetchUserDetails(){
     const streamResponse=await fetch(`https://api.github.com/users/${share}`)
@@ -39,7 +33,11 @@ const dataValidation=()=>{
     
 
          ShareUserName(userName)
-        if(inpuser==='admin@gmail.com' && pass==='admin@123'){
+        if(userName===''){
+            alert('Enter Your GitHub User Name')
+            return
+        }
+        else if(inpuser==='admin@gmail.com' && pass==='admin@123'){
             localStorage.setItem("loginsuccess",true)
             // navigate("/")
             setTimeout(()=>{
@@ -64,20 +62,20 @@ const dataValidation=()=>{
                 <div className="inputContainer">
                 <h2 className='logintitle'>Log In</h2>
                 <div className="user">
-                <input type='text' placeholder='Username' className='userName' onChange={(e)=>{
+                <input type='text' placeholder='GitHub User Name' className='userName' onChange={(e)=>{
                     getUserName(e.target.value)
                     
                 }}/>
                 <i class="fa-solid fa-user"></i>
                 </div>
                 <div className="user">
-                <input type='email' placeholder='Your Email' className='Email' onChange={(e)=>{
+                <input type='email' placeholder='admin@gmail.com' className='Email' onChange={(e)=>{
                     setInpuser(e.target.value)
                 }}/>
                 <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div className="user">
-                <input type='password' placeholder='Your Password' className='Password' onChange={(e)=>{
+                <input type='password' placeholder='admin@123' className='Password' onChange={(e)=>{
                     setPass(e.target.value)
                 }}  />
                 <i class="fa-solid fa-key"></i>
@@ -87,9 +85,7 @@ const dataValidation=()=>{
                 <button className='but' onClick={()=>{
                     dataValidation()
                 }}>Login</button>
-                 <p className='note'>Note:Enter your Github user Name</p>
-                 <p className='note1'>Email:admin@gmail.com</p>
-                 <p className='note1'>password:admin@123</p>
+                 <p className='note text-danger'>Note:Enter your Github user Name</p>
                 </div>
                
             </div>

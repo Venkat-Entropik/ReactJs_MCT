@@ -18,3 +18,10 @@ export const Gallary=(data)=>{
         data:data
     }
 }
+
+export const EditBlog=(data)=>{
+    return{
+        type:"EDIT",
+        data:data
+    }
+}

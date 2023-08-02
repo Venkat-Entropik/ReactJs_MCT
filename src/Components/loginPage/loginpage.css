@@ -1,5 +1,5 @@
 
-  .loginPage{
+.loginPage{
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
@@ -110,7 +110,9 @@ i{
     font-weight: 900;
     margin-right: 10px;
 }
-
+.note{
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 600px) {
     .loginContainer {

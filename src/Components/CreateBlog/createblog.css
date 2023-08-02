@@ -1,4 +1,4 @@
-.createBlog{
+/* .createBlog{
     width: 100vw;
     height: 100vh;
     padding: 20px;
@@ -55,4 +55,74 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
+} */
+
+.createBlog {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.createBlogConainer {
+    width: 70%;
+    height: 60%;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 20px;
+    margin: 30px auto;
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createtitle {
+    text-align: center;
+    text-transform: capitalize;
+    color: darkgreen;
+}
+
+.createCompTitle,
+.textArea {
+    width: 50%;
+    height: 2rem;
+    margin: 15px; /* Reduced margin for smaller screens */
+    font-size: 1.2rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    outline: none;
+    color: blueviolet;
+    padding: 5px; /* Increased padding for smaller screens */
+}
+
+.textArea {
+    height: 25%; /* Reduced height for smaller screens */
+}
+
+.createBlogbut {
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .createBlogConainer {
+        width: 90%;
+        height: auto; /* Adjust height to content for smaller screens */
+    }
+
+    .createCompTitle,
+    .textArea {
+        width: 80%;
+        font-size: 1rem;
+    }
 }
