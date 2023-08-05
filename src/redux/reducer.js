@@ -1,16 +1,16 @@
-const userData={
-    userDetails:[]
-}
-export const userDataReducer=(state=userData,{type,data})=>{
-    switch (type) {
-        case "USERDATA":
+// const userData={
+//     userDetails:[]
+// }
+// export const userDataReducer=(state=userData,{type,data})=>{
+//     switch (type) {
+//         case "USERDATA":
             
-            return{...state,userDetails:data}
+//             return{...state,userDetails:data}
     
-        default:
-            return state;
-    }
-}
+//         default:
+//             return state;
+//     }
+// }
 
 const allBlogData=[
 

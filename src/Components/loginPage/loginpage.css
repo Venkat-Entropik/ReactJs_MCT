@@ -14,8 +14,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   
-    /* border: 2px solid black; */
     margin: auto;
     background-color: white;
     box-shadow: 0px 0px 3px black;
@@ -25,7 +23,6 @@
 .leftContainer{
     width: 50%;
     height: 100%;
-    /* border: 2px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,99 +33,37 @@
 .rightContainer{
     width: 50%;
     height: 100%;
-    /* border: 2px solid black; */
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
   
 }
-.inputContainer{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 100%;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
 
-}
 .loginImage{
     width: 70%;
     height: 70%;
     
 }
-.logintitle{
-    font-size: 2rem;
-    font-family: cursive;
-    color: green;
-}
-.user{
-    width: 90%;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-}
-i{
-    color: blue;
-    font-size: 1.2rem;
-}
-.userName{
-    width: 70%;
-    height: 2.2rem;
-    border: none;
-    border-bottom: 2px solid red;
-    font-size: 1.2rem;
-    color: green;
-    outline: none;
-}
-.Email{
-    width: 70%;
-    height: 2.2rem;
-    border: none;
-    border-bottom: 2px solid red;
-    font-size: 1.2rem;
-    color: green;
-    outline: none;
-}
-.Password{
-    width: 70%;
-    height: 2.2rem;
-    border: none;
-    border-bottom: 2px solid red;
-    font-size: 1.2rem;
-    color: green;
-    outline: none;
-}
-.but{
-    width: 40%;
-    height: 2.1rem;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    background-color: blueviolet;
-    font-size: 1.2rem;
-    color: white;
-    font-family: cursive;
-    font-weight: 900;
-    margin-right: 10px;
-}
-.note{
-    font-weight: bold;
-}
+
+
 
 @media only screen and (max-width: 600px) {
     .loginContainer {
       width: 90%;
-      height: 90%;
+      height: 85%;
     }
   
     .leftContainer {
       width: 100%;
-      height: 40%;
+      height: 50%;
       border-radius: 20px 20px 0 0;
     }
   
     .rightContainer {
       width: 100%;
-      height: 70%;
+      height: 60%;
       padding: 10px;
     text-align: center;
     }
@@ -138,23 +73,5 @@ i{
       height: 100%;
     }
   
-    .inputContainer {
-      width: 100%;
-    }
-  
-    .but {
-      width: 40%;
-    }
-    .userName{
-        width: 100%;
-    }
-    .Email{
-        width: 100%;
-    }
-    .Password{
-        width: 100%;
-    }
-    .logintitle{
-        font-size: 1.7rem;
-    }
+    
   }

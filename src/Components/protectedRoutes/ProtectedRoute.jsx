@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useCon } from '../context/CreateContext'
 
 const ProtectedRoute = ({Component}) => {
     const navigate=useNavigate()
+    const{user}=useCon()
     useEffect(() => {
       
-    if(!localStorage.getItem("loginsuccess")){
+    if(!user){
        navigate('/login');
     }
      
     })
-    console.log(localStorage.getItem("loginsuccess"))
+    
   return (
     <div>
         <Component/>

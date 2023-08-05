@@ -25,6 +25,8 @@ const CreateBlogComp = () => {
     if(titleData !== '' && desc !==''){
          
         dispatch(BloData(newBlog))
+        setTitle('')
+        setDisc('')
         naigate('/')
     }
     else{
@@ -54,8 +56,9 @@ const CreateBlogComp = () => {
                     setDisc('')
                     setTitle('')
                     setEditId('')
-                    naigate('/')
                     setEdit(false)
+                    naigate('/')
+                    
                     
                  }}>Edit Post</button>) : (<button className='createBlogbut' onClick={()=>{
                     
