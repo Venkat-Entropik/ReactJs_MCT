@@ -44,7 +44,7 @@ galleryData.forEach((ele)=>{
           selector.map((ele)=>{
             return(
               <>
-              <Link to={`/${ele.id}`}>
+              <Link to={`${ele.id}`}>
                  <div className="homeCard">
                 <div className="blogImageContainer">
                   <img src={images[Math.floor(Math.random()*images.length)]} alt='blogImage' className='blogImage'/>
